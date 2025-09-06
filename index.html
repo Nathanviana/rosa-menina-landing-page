@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Landing Starter • Tailwind + AOS</title>
+    <meta name="description" content="Boilerplate leve para landing page com Tailwind CSS e AOS (Animate On Scroll)." />
+    <meta property="og:title" content="Landing Starter • Tailwind + AOS" />
+    <meta property="og:description"
+        content="Boilerplate leve para landing page com Tailwind CSS e AOS (Animate On Scroll)." />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#0ea5e9" />
+    <!-- Tailwind CDN (rápido para protótipos) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- AOS (Animate on Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <!-- Fonte opcional Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- CSS externo -->
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body class="min-h-screen bg-slate-50 text-slate-800 dark:bg-slate-50 dark:text-slate-100">
+    <!-- Header -->
+    <header class="fixed inset-x-0 top-0 z-50">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <nav class="mt-4 glass rounded-2xl border border-white/30 shadow-xl ring-1 ring-black/5 dark:ring-white/10">
+                <div class="flex items-center justify-between px-4 py-3">
+                    <a href="#home" class="flex items-center gap-2 font-extrabold tracking-tight">
+                        <span
+                            class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-pink-500 text-white">R</span>
+                        <span class="text-lg text-slate-600">Rosa <span class="text-pink-500">Menina</span></span>
+                    </a>
+                    <button id="menuBtn" class="lg:hidden rounded-xl bg-pink-500 border px-3 py-2 text-sm">
+                        Menu
+                    </button>
+                    <ul class="hidden items-center gap-6 lg:flex">
+                        <li><a href="#features" class="text-slate-600 hover:text-pink-600">Recursos</a></li>
+                        <li><a href="#gallery" class="text-slate-600 hover:text-pink-600">Galeria</a></li>
+                        <li><a href="#faq" class="text-slate-600 hover:text-pink-600">FAQ</a></li>
+                        <li><a href="#cta"
+                                class="inline-flex items-center rounded-xl bg-pink-500 px-4 py-2 font-semibold text-white shadow hover:bg-pink-500">Contato</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Mobile -->
+                <div id="mobileMenu" class="hidden border-t px-4 pb-4 lg:hidden">
+                    <a href="#features" class="text-slate-600 block py-2">Recursos</a>
+                    <a href="#gallery" class="text-slate-600 block py-2">Galeria</a>
+                    <a href="#faq" class="text-slate-600 block py-2">FAQ</a>
+                    <a href="#cta"
+                        class="mt-2 block rounded-xl bg-pink-600 px-4 py-2 text-center font-semibold text-white">Contato</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- Hero -->
+    <section id="home" class="relative isolate overflow-hidden min-h-screen flex items-center">
+        <!-- Imagem de fundo aprimorada -->
+        <div class="absolute inset-0 -z-20">
+            <img src="https://images.unsplash.com/photo-1638349978185-b2556ec8436a?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                 alt="Fashion background" 
+                 class="h-full w-full object-cover object-center transform scale-105 transition-transform duration-[10s] ease-out" />
+            <!-- Overlay gradiente sofisticado -->
+            <div class="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-black/70"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-pink-900/30 via-transparent to-pink-500/20"></div>
+        </div>
+        
+        <!-- Efeitos rosa aprimorados (escondidos no mobile para não atrapalhar) -->
+        <!-- <div class="hidden sm:block absolute -top-40 left-1/2 -z-10 h-[50rem] w-[60rem] -translate-x-1/2 rounded-full bg-gradient-to-r from-pink-300/30 via-pink-500/15 to-pink-300/30 blur-3xl animate-pulse"></div>
+        <div class="hidden sm:block absolute top-20 right-1/4 -z-10 h-[25rem] w-[35rem] rounded-full bg-gradient-to-l from-pink-400/25 to-transparent blur-2xl"></div>
+        <div class="hidden sm:block absolute bottom-20 left-1/4 -z-10 h-[30rem] w-[40rem] rounded-full bg-gradient-to-r from-pink-200/20 to-pink-500/10 blur-3xl"></div> -->
+        
+        
+        <div class="mx-auto max-w-md sm:max-w-7xl px-4 sm:px-6 lg:px-8 pt-24 pb-12 w-full">
+            <div class="mx-auto max-w-md sm:max-w-4xl text-center" data-aos="fade-up" data-aos-duration="1000">
+                
+                <!-- Título principal -->
+                <h1 class="text-3xl sm:text-5xl lg:text-7xl font-black tracking-tight text-white drop-shadow-2xl leading-tight" data-aos="fade-up" data-aos-delay="400">
+                    O Melhor da 
+                    <span class="relative">
+                        <span class="bg-gradient-to-r from-pink-300 via-pink-400 to-pink-500 bg-clip-text text-transparent">moda</span>
+                    </span>
+                    <br />
+                    <span class="relative inline-block">
+                        <span class="bg-gradient-to-r from-pink-400 via-pink-300 to-pink-500 bg-clip-text text-transparent">feminina</span>
+                    </span>
+                    <br />
+                    em <span class="text-pink-300 font-extrabold">Belém!</span>
+                </h1>
+                
+                <!-- Subtítulo -->
+                <p class="mt-4 sm:mt-8 text-base sm:text-xl leading-7 sm:leading-8 text-white/90 drop-shadow-lg max-w-xs sm:max-w-3xl mx-auto font-medium" data-aos="fade-up" data-aos-delay="600">
+                    Descubra nossa coleção exclusiva de roupas femininas. 
+                    <span class="text-pink-200 font-semibold">Estilo, elegância e conforto</span> 
+                    em cada peça selecionada especialmente para você.
+                </p>
+                
+                <!-- Features rápidas -->
+                <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row flex-wrap items-center justify-center gap-2 sm:gap-6 text-white/80 text-xs sm:text-sm" data-aos="fade-up" data-aos-delay="800">
+                    <div class="flex items-center gap-2">
+                        <span class="h-2 w-2 rounded-full bg-pink-400"></span>
+                        <span class="font-medium">Coleção Exclusiva</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="h-2 w-2 rounded-full bg-pink-400"></span>
+                        <span class="font-medium">Qualidade Premium</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="h-2 w-2 rounded-full bg-pink-400"></span>
+                        <span class="font-medium">Atendimento Personalizado</span>
+                    </div>
+                </div>
+                
+                <!-- Botões de ação -->
+                <div class="mt-8 sm:mt-12 flex flex-col gap-3 sm:flex-row items-center justify-center" data-aos="zoom-in" data-aos-delay="1000">
+                    <a href="#cta"
+                        class="group relative overflow-hidden rounded-2xl bg-gradient-to-r from-pink-500 to-pink-600 px-6 py-3 sm:px-8 sm:py-4 text-base sm:text-lg font-bold text-white shadow-2xl hover:shadow-pink-500/25 transition-all duration-300 hover:scale-105 transform w-full sm:w-auto">
+                        <span class="relative z-10 flex items-center gap-2 justify-center">
+                            Quero conhecer
+                            <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                            </svg>
+                        </span>
+                        <div class="absolute inset-0 bg-gradient-to-r from-pink-400 to-pink-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </a>
+                    
+                    <a href="#gallery"
+                        class="group rounded-2xl border-2 border-white/30 bg-white/10 backdrop-blur-sm px-6 py-3 sm:px-8 sm:py-4 text-base sm:text-lg font-bold text-white hover:bg-white hover:text-pink-600 transition-all duration-300 hover:scale-105 transform shadow-lg w-full sm:w-auto">
+                        <span class="flex items-center gap-2 justify-center">
+                            Ver coleção
+                            <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Indicador de scroll -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce mt-8 sm:mt-16 lg:mt-20" data-aos="fade-in" data-aos-delay="2000">
+            <div class="w-6 h-10 border-2 border-white/50 mt-20 rounded-full flex justify-center">
+                <div class="w-1 h-3 bg-white/70 rounded-full mt-2 animate-pulse"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="relative py-24">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="mx-auto max-w-2xl text-center" data-aos="fade-up">
+                <h2 class="text-3xl text-slate-600 font-bold tracking-tight sm:text-4xl">Feito para você!</h2>
+                <p class="mt-4 text-slate-600 dark:text-slate-400">Perfeito para quem busca estilo e conforto.</p>
+            </div>
+            <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                <div class="rounded-2xl border bg-white p-6 shadow-sm dark:border-pink-300 dark:bg-pink-400"
+                    data-aos="fade-up">
+                    <div
+                        class="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-pink-100 text-pink-700 dark:bg-white-950 dark:text-pink-300">
+                        ❤︎</div>
+                    <h3 class="text-lg font-semibold">Elegante e moderna</h3>
+                    <p class="mt-2 text-sm text-slate-600 dark:text-slate-50">Looks que combinam estilo e conforto.</p>
+                </div>
+                <div class="rounded-2xl border bg-white p-6 shadow-sm dark:border-pink-300 dark:bg-pink-400"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div
+                        class="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-pink-100 text-pink-700 dark:bg-white-950 dark:text-pink-300">
+                        ★</div>
+                    <h3 class="text-lg font-semibold">Coleções exclusivas</h3>
+                    <p class="mt-2 text-sm text-slate-600 dark:text-slate-50">Looks que se destacam com estilo único.</p>
+                </div>
+                <div class="rounded-2xl border bg-white p-6 shadow-sm dark:border-pink-300 dark:bg-pink-400"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div
+                        class="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-pink-100 text-pink-700 dark:bg-white-950 dark:text-pink-300">
+                        ✸</div>
+                    <h3 class="text-lg font-semibold">Sofisticação e conforto</h3>
+                    <p class="mt-2 text-sm text-slate-600 dark:text-slate-50">Looks que unem elegância e bem-estar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-gradient-to-b from-white to-slate-50 dark:from-pink-400 dark:to-pink-300">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="mx-auto max-w-2xl text-center" data-aos="fade-up">
+                <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">O que dizem</h2>
+                <p class="mt-4 text-slate-50 dark:text-slate-50">Feedback de quem já usou Rosa Menina.</p>
+            </div>
+            <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                <figure class="rounded-2xl border bg-white p-6 shadow-sm dark:border-white-700 dark:bg-white-800"
+                    data-aos="zoom-in">
+                    <blockquote class="text-sm text-slate-700 dark:text-slate-600">"Amei a qualidade das peças! O tecido é super confortável."</blockquote>
+                    <figcaption class="mt-4 text-xs text-slate-500">— Vitoria Pontes</figcaption>
+                </figure>
+                <figure class="rounded-2xl border bg-white p-6 shadow-sm dark:border-white-700 dark:bg-white-800"
+                    data-aos="zoom-in" data-aos-delay="100">
+                    <blockquote class="text-sm text-slate-700 dark:text-slate-600">"As roupas vestem muito bem e seguem as tendências da moda."</blockquote>
+                    <figcaption class="mt-4 text-xs text-slate-500">— Desiree</figcaption>
+                </figure>
+                <figure class="rounded-2xl border bg-white p-6 shadow-sm dark:border-white-700 dark:bg-white-800"
+                    data-aos="zoom-in" data-aos-delay="200">
+                    <blockquote class="text-sm text-slate-700 dark:text-slate-600">"o atendimento foi impecável, tiraram todas as minhas dúvidas."
+                    </blockquote>
+                    <figcaption class="mt-4 text-xs text-slate-500">— Juliana Martins</figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeria/Portfólio -->
+    <section id="gallery" class="py-24 bg-white dark:bg-white">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="mx-auto max-w-2xl text-center" data-aos="fade-up">
+                <h2 class="text-3xl text-slate-600 font-bold tracking-tight sm:text-4xl">Nossa Galeria</h2>
+                <p class="mt-4 text-slate-600 dark:text-slate-600">Alguns dos nossos Looks mais especiais</p>
+            </div>
+            
+            <!-- Grid 3x3 -->
+            <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Imagem 1 -->
+                <div class="group relative aspect-square overflow-hidden rounded-2xl bg-gradient-to-br from-pink-100 to-pink-200 shadow-lg hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <img src="./image/WhatsApp Image 2025-09-05 at 23.26.42.jpeg" 
+                         alt="Look Rosa Menina 1" 
+                         class="w-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-pink-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <h3 class="font-semibold">Estilo Casual</h3>
+                        <p class="text-sm text-pink-100">Conforto e elegância</p>
+                    </div>
+                </div>
+
+                <!-- Imagem 2 -->
+                <div class="group relative aspect-square overflow-hidden rounded-2xl bg-gradient-to-br from-pink-100 to-pink-200 shadow-lg hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <img src="./image/WhatsApp Image 2025-09-05 at 23.26.43.jpeg" 
+                         alt="Look Rosa Menina 2" 
+                         class="h- w-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-pink-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <h3 class="font-semibold">Look Feminino</h3>
+                        <p class="text-sm text-pink-100">Delicadeza e charme</p>
+                    </div>
+                </div>
+
+                <!-- Imagem 3 -->
+                <div class="group relative aspect-square overflow-hidden rounded-2xl bg-gradient-to-br from-pink-100 to-pink-200 shadow-lg hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
+                    <img src="./image/WhatsApp Image 2025-09-05 at 23.26.43 (1).jpeg" 
+                         alt="Look Rosa Menina 3" 
+                         class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-pink-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <h3 class="font-semibold">Moda Jovem</h3>
+                        <p class="text-sm text-pink-100">Estilo único</p>
+                    </div>
+                </div>
+
+                <!-- Imagem 4 -->
+                <div class="group relative aspect-square overflow-hidden rounded-2xl bg-gradient-to-br from-pink-100 to-pink-200 shadow-lg hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <img src="./image/WhatsApp Image 2025-09-05 at 23.26.43 (2).jpeg" 
+                         alt="Look Rosa Menina 4" 
+                         class="w-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-pink-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <h3 class="font-semibold">Tendência</h3>
+                        <p class="text-sm text-pink-100">Sempre na moda</p>
+                    </div>
+                </div>
+
+                <!-- Imagem 5 -->
+                <div class="group relative aspect-square overflow-hidden rounded-2xl bg-gradient-to-br from-pink-100 to-pink-200 shadow-lg hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <img src="./image/WhatsApp Image 2025-09-05 at 23.26.43 (3).jpeg" 
+                         alt="Look Rosa Menina 5" 
+                         class="w-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-pink-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <h3 class="font-semibold">Sofisticação</h3>
+                        <p class="text-sm text-pink-100">Elegância pura</p>
+                    </div>
+                </div>
+
+                <!-- Imagem 6 -->
+                <div class="group relative aspect-square overflow-hidden rounded-2xl bg-gradient-to-br from-pink-100 to-pink-200 shadow-lg hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
+                    <img src="./image/WhatsApp Image 2025-09-05 at 23.26.44.jpeg" 
+                         alt="Look Rosa Menina 6" 
+                         class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-pink-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <h3 class="font-semibold">Coleção Verão</h3>
+                        <p class="text-sm text-pink-100">Frescor e estilo</p>
+                    </div>
+                </div>
+
+                <!-- Imagem 7 -->
+                <div class="group relative aspect-square overflow-hidden rounded-2xl bg-gradient-to-br from-pink-100 to-pink-200 shadow-lg hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <img src="./image/WhatsApp Image 2025-09-05 at 23.26.44 (1).jpeg" 
+                         alt="Look Rosa Menina 7" 
+                         class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-pink-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <h3 class="font-semibold">Look Urbano</h3>
+                        <p class="text-sm text-pink-100">Modernidade</p>
+                    </div>
+                </div>
+
+                <!-- Imagem 8 -->
+                <div class="group relative aspect-square overflow-hidden rounded-2xl bg-gradient-to-br from-pink-100 to-pink-200 shadow-lg hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <img src="./image/WhatsApp Image 2025-09-05 at 23.26.44 (2).jpeg" 
+                         alt="Look Rosa Menina 8" 
+                         class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-pink-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <h3 class="font-semibold">Estilo Único</h3>
+                        <p class="text-sm text-pink-100">Personalidade</p>
+                    </div>
+                </div>
+
+                <!-- Imagem 9 -->
+                <div class="group relative aspect-square overflow-hidden rounded-2xl bg-gradient-to-br from-pink-100 to-pink-200 shadow-lg hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
+                    <img src="./image/WhatsApp Image 2025-09-05 at 23.26.44 (3).jpeg" 
+                         alt="Look Rosa Menina 9" 
+                         class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-pink-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <h3 class="font-semibold">Rosa Menina</h3>
+                        <p class="text-sm text-pink-100">Qualidade premium</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botão Ver Mais (Instagram) -->
+            <div class="mt-12 text-center" data-aos="fade-up" data-aos-delay="400">
+                <a href="https://www.instagram.com/rosameninabelem" target="_blank" rel="noopener noreferrer"
+                   class="inline-block rounded-2xl bg-pink-500 px-8 py-3 font-semibold text-white shadow-lg hover:bg-pink-700 hover:shadow-xl transition-all duration-300"
+                   aria-label="Visitar Instagram da loja Rosa Menina">
+                    Ver mais Looks
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-24 bg-gradient-to-b from-white to-slate-50 dark:from-pink-400 dark:to-pink-300">
+        <div class="mx-auto max-w-5xl px-6 lg:px-8">
+            <div class="mx-auto max-w-2xl text-center" data-aos="fade-up">
+                <h2 class="text-3xl text-slate-50 font-bold tracking-tight sm:text-4xl">Perguntas frequentes</h2>
+            </div>
+            <div class="mt-10 space-y-4">
+                <details class="group rounded-2xl border bg-white p-6 dark:bg-white"
+                    data-aos="fade-up">
+                    <summary class="flex cursor-pointer list-none items-center justify-between font-semibold text-slate-600">
+                        Aonde ficamos localizado?
+                        <span class="transition-transform group-open:rotate-45">＋</span>
+                    </summary>
+                    <p class="mt-3 text-sm text-slate-600 dark:text-slate-600">Rua Igarapé Miri, Guamá, 232 <br> Guanabara, rua liberdade 421</p>
+                </details>
+                <details class="group rounded-2xl border bg-white p-6 dark:bg-white"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <summary class="flex cursor-pointer list-none items-center justify-between font-semibold text-slate-600">
+                        Qual é o prazo de entrega das minhas compras?
+                        <span class="transition-transform group-open:rotate-45">＋</span>
+                    </summary>
+                    <p class="mt-3 text-sm text-slate-600 dark:text-slate-600">O prazo de entrega varia de acordo com a sua localização e o tipo de frete escolhido. Em média, a entrega ocorre entre 3 a 7 dias úteis para a maioria das regiões.</p>
+                </details>
+                <details class="group rounded-2xl border bg-white p-6 dark:bg-white"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <summary class="flex cursor-pointer list-none items-center justify-between font-semibold text-slate-600">
+                        Posso trocar ou devolver um produto?
+                        <span class="transition-transform group-open:rotate-45">＋</span>
+                    </summary>
+                    <p class="mt-3 text-sm text-slate-600 dark:text-slate-600">Sim, aceitamos trocas e devoluções dentro de 30 dias após o recebimento do produto. O item deve estar em perfeitas condições, senza sinais de uso, e com todas as etiquetas intactas.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="cta" class="relative py-24">
+        <div class="mx-auto max-w-5xl px-6 text-center" data-aos="fade-up">
+            <div class="rounded-3xl bg-gradient-to-tr from-pink-600 to-pink-300 p-10 text-white shadow-2xl">
+                <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Pronto para lançar?</h2>
+                <p class="mx-auto mt-3 max-w-2xl text-white/90">Copie este arquivo, troque textos/cores e publique.
+                    Simples assim.</p>
+                
+                <!-- Formulário melhorado -->
+                <div class="mx-auto mt-8 max-w-2xl">
+                    <form class="space-y-4">
+                        <!-- Primeira linha: Nome e Email -->
+                        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                            <div class="relative">
+                                <input type="text" required placeholder="Seu nome completo"
+                                    class="w-full rounded-xl border-2 border-white/20 bg-white/10 px-4 py-3 text-white placeholder:text-white/70 backdrop-blur-sm focus:border-white/50 focus:outline-none focus:ring-2 focus:ring-white/25" />
+                            </div>
+                            <div class="relative">
+                                <input type="email" required placeholder="Seu melhor e-mail"
+                                    class="w-full rounded-xl border-2 border-white/20 bg-white/10 px-4 py-3 text-white placeholder:text-white/70 backdrop-blur-sm focus:border-white/50 focus:outline-none focus:ring-2 focus:ring-white/25" />
+                            </div>
+                        </div>
+                        
+                        <!-- Segunda linha: Telefone -->
+                        <div class="relative">
+                            <input type="tel" required placeholder="Seu número de WhatsApp (com DDD)"
+                                class="w-full rounded-xl border-2 border-white/20 bg-white/10 px-4 py-3 text-white placeholder:text-white/70 backdrop-blur-sm focus:border-white/50 focus:outline-none focus:ring-2 focus:ring-white/25" />
+                        </div>
+                        
+                        <!-- Botões de ação -->
+                        <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-center">
+                            <button type="submit" class="rounded-xl bg-white px-8 py-3 font-semibold text-pink-600 shadow-lg hover:bg-white/90 hover:shadow-xl transition-all duration-300">
+                                📩 Quero receber novidades
+                            </button>
+                            
+                            <!-- Botão WhatsApp -->
+                            <a href="https://wa.me/5591982267574?text=Olá! Gostaria de saber mais sobre os serviços da Rosa Menina." 
+                               target="_blank"
+                               class="group inline-flex items-center justify-center gap-2 rounded-xl border-2 border-white bg-transparent px-8 py-3 font-semibold text-white hover:bg-white hover:text-pink-600 transition-all duration-300">
+                                <!-- Ícone WhatsApp SVG -->
+                                <svg class="h-5 w-5 transition-colors duration-300" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.531 3.488"/>
+                                </svg>
+                                Falar no WhatsApp
+                            </a>
+                        </div>
+                    </form>
+                    
+                    <!-- Texto informativo -->
+                    <p class="mt-4 text-xs text-white/60">
+                        🔒 Seus dados estão seguros. Não compartilhamos com terceiros.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t py-10 text-sm text-slate-500 dark:border-slate-200">
+        <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 sm:flex-row">
+            <p>© <span id="year"></span> Rosa Menina. Todos os direitos reservados.</p>
+            <div class="flex items-center gap-4">
+                <a href="#" class="hover:text-slate-700">Termos</a>
+                <span>•</span>
+                <a href="#" class="hover:text-slate-700">Privacidade</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        if (menuBtn) menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+
+
+        // Init AOS
+        AOS.init({
+            duration: 700,
+            easing: 'ease-out-cubic',
+            once: true,
+            offset: 80
+        });
+
+
+        // Current year
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
